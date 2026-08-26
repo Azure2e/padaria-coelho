@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 __pycache__/
 api/segredo.key
 api/tokens.json
@@ -7,3 +8,23 @@ api/servidor.log
 api/servidor.log.*
 api/tls/key.pem
 api/tls/cert.pem
+=======
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+>>>>>>> e9aa335c42e5b4c0d299199f0186766048399b95
