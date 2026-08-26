@@ -1,0 +1,7 @@
+{
+  "max_mb": 1,
+  "guardar": 5,
+  "comprimir": true,
+  "por_dia": true,
+  "arquivo": "servidor.log"
+}

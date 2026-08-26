@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="normal">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema · Padaria Coelho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    (function(){var t=localStorage.getItem("coelho_theme")||"normal";document.documentElement.setAttribute("data-theme",t);})();
+  </script>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="img/logo.jpg" alt="Logo" />
+        <span>Sistema Coelho</span>
+      </a>
+      <div class="theme-box">
+        <button class="mini" data-theme-btn="claro">Claro</button>
+        <button class="mini active" data-theme-btn="normal">Normal</button>
+        <button class="mini" data-theme-btn="escuro">Escuro</button>
+        <button class="mini" id="soundToggle" type="button">Som lig.</button>
+          <button class="mini" id="soundSettings" type="button">Sons</button>
+        <a class="btn btn-ghost" href="index.html">Voltar ao site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="admin-login" id="loginBox">
+    <div class="panel" style="max-width:420px;margin:60px auto">
+      <p class="kicker" style="color:var(--gold)">Acesso interno</p>
+      <h2>Painel de pedidos</h2>
+      <p class="muted">Senha de demonstração: <strong>coelho1000</strong></p>
+      <form id="loginForm">
+        <label>Senha</label>
+        <input type="password" name="senha" required />
+        <p id="err" style="color:var(--danger)"></p>
+        <button class="btn btn-dark" type="submit">Entrar</button>
+      </form>
+    </div>
+  </main>
+
+  <main class="admin-app" id="adminApp" hidden>
+    <div class="section-head">
+      <div>
+        <p class="kicker" style="color:var(--gold)">Gestão</p>
+        <h2>Pedidos do dia</h2>
+        <p class="muted" id="liveNote">Som toca quando entra pedido novo</p>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-ghost" onclick="seed()">Gerar pedido exemplo</button>
+        <button class="btn btn-dark" onclick="logout()">Sair</button>
+      </div>
+    </div>
+    <div class="stats" style="margin-bottom:22px">
+      <div class="stat"><b id="kpiPedidos">0</b><span class="muted">pedidos</span></div>
+      <div class="stat"><b id="kpiFaturado">R$ 0</b><span class="muted">no sistema</span></div>
+      <div class="stat"><b id="kpiNovos">0</b><span class="muted">novos</span></div>
+    </div>
+    <div class="panel" id="relatorioBox" style="margin-bottom:22px">
+      <div class="section-head">
+        <div>
+          <p class="kicker" style="color:var(--gold)">Hoje</p>
+          <h2 id="relData">Relatório do dia</h2>
+        </div>
+        <button class="btn btn-ghost" type="button" onclick="reporEstoque()">Repor estoque do dia</button>
+      </div>
+      <div class="stats" id="relKpis"></div>
+      <p class="muted" id="relVendidos"></p>
+    </div>
+    <div class="panel" style="margin-bottom:22px">
+      <div class="section-head">
+        <div>
+          <p class="kicker" style="color:var(--gold)">Servidor</p>
+          <h2>Logs ao vivo</h2>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <input id="logQuery" placeholder="Filtrar: pix, 401, whatsapp" style="min-width:180px" />
+          <button class="btn btn-ghost" type="button" onclick="loadLogs()">Atualizar</button>
+          <button class="btn btn-ghost" type="button" onclick="girarLogs()">Rotacionar agora</button>
+        </div>
+      </div>
+      <form id="logCfg" class="checkout" style="grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 12px">
+        <label>Máx. MB<input id="logMaxMb" name="max_mb" type="number" min="0.2" step="0.1" value="1"></label>
+        <label>Guardar<input id="logKeep" name="guardar" type="number" min="1" max="20" value="5"></label>
+        <label>Gzip<select id="logGz" name="comprimir"><option value="true">sim</option><option value="false">não</option></select></label>
+        <label>Por dia<select id="logDia" name="por_dia"><option value="true">sim</option><option value="false">não</option></select></label>
+        <button class="btn btn-dark" type="submit" style="grid-column:1/-1">Salvar rotação</button>
+      </form>
+      <p class="muted" id="logStatus"></p>
+      <pre id="logBox" style="max-height:240px;overflow:auto;font-size:.78rem;background:var(--cream);padding:12px;border-radius:10px;white-space:pre-wrap"></pre>
+    </div>
+    <div class="panel" style="padding:0;overflow:auto">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Pedido</th>
+            <th>Cliente</th>
+            <th>Itens</th>
+            <th>Total</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+
+
+    <div class="panel" style="margin-top:28px">
+      <h2>Formulários WhatsApp</h2>
+      <p class="muted">Mensagens montadas no backend antes de abrir o wa.me.</p>
+      <div style="overflow:auto">
+        <table class="table">
+          <thead><tr><th>ID</th><th>Tipo</th><th>Cliente</th><th>Prévia</th><th></th></tr></thead>
+          <tbody id="waRows"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:28px">
+      <h2>PIX recebidos</h2>
+      <p class="muted">Confirme só depois de ver o valor na conta. A confirmação é auditada.</p>
+      <div style="overflow:auto">
+        <table class="table">
+          <thead>
+            <tr><th>PIX</th><th>Cliente</th><th>Valor</th><th>Status</th><th></th></tr>
+          </thead>
+          <tbody id="pixRows"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:28px">
+      <h2>Cardápio · pães, pastéis e bebidas</h2>
+      <p class="muted">A API grava o produto e o preço. O site atualiza na próxima abertura.</p>
+      <form id="productForm" class="checkout" style="grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 22px">
+        <input name="nome" placeholder="Nome (ex: Pastel de frango)" required />
+        <select name="categoria" required>
+          <option value="Pães">Pães</option>
+          <option value="Pastéis">Pastéis</option>
+          <option value="Bebidas">Bebidas</option>
+        </select>
+        <input name="preco" type="number" min="0" step="0.01" placeholder="Preço" required />
+        <input name="unidade" placeholder="un, fatia, copo" value="un" />
+        <input name="estoque" type="number" min="0" placeholder="Estoque do dia" value="20" />
+        <input name="descricao" placeholder="Descrição" style="grid-column:1/-1" />
+        <button class="btn btn-gold" type="submit" style="grid-column:1/-1">Cadastrar na API</button>
+      </form>
+      <p class="muted" id="apiNote">Carregando API...</p>
+      <div style="overflow:auto">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Categoria</th>
+              <th>Preço</th>
+              <th>Estoque hoje</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="productRows"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+  <script src="js/audio-engine.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

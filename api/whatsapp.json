@@ -1,0 +1,26 @@
+{
+  "mensagens": [
+    {
+      "id": "WA-3CE647",
+      "tipo": "pedido",
+      "nome": "jaques da silva oliveira",
+      "contato": "68999236863",
+      "mensagem": "Pedido pelo site Padaria Coelho\nPedido: PIX-D9028D27\nNome: jaques da silva oliveira\nWhatsApp: 68999236863\nTipo: retirada\nPIX: PIX-D9028D27\nItens:\n- 1x Café com Leite + Pão na Chapa\n- 3x Pastel de Palmito",
+      "link": "https://wa.me/5511999999999?text=Pedido%20pelo%20site%20Padaria%20Coelho%0APedido%3A%20PIX-D9028D27%0ANome%3A%20jaques%20da%20silva%20oliveira%0AWhatsApp%3A%2068999236863%0ATipo%3A%20retirada%0APIX%3A%20PIX-D9028D27%0AItens%3A%0A-%201x%20Caf%C3%A9%20com%20Leite%20%2B%20P%C3%A3o%20na%20Chapa%0A-%203x%20Pastel%20de%20Palmito",
+      "numero": "5511999999999",
+      "ip": "127.0.0.1",
+      "criado": "2026-08-26T22:21:56.566233+00:00"
+    },
+    {
+      "id": "WA-6D9819",
+      "tipo": "contato",
+      "nome": "Ana",
+      "contato": "1198888",
+      "mensagem": "Contato pelo site Padaria Coelho\nNome: Ana\nContato: 1198888\nMensagem: Quero bolo",
+      "link": "https://wa.me/5511999999999?text=Contato%20pelo%20site%20Padaria%20Coelho%0ANome%3A%20Ana%0AContato%3A%201198888%0AMensagem%3A%20Quero%20bolo",
+      "numero": "5511999999999",
+      "ip": "127.0.0.1",
+      "criado": "2026-08-26T13:42:51.322497+00:00"
+    }
+  ]
+}

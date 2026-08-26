@@ -1,0 +1,9 @@
+{
+  "minimo_retirada": 0,
+  "bairros": [
+    { "id": "centro", "nome": "Centro", "taxa": 4.0, "minimo": 15.0, "ativo": true },
+    { "id": "jardim-coelho", "nome": "Jardim Coelho", "taxa": 6.0, "minimo": 20.0, "ativo": true },
+    { "id": "vila-aurora", "nome": "Vila Aurora", "taxa": 7.5, "minimo": 20.0, "ativo": true },
+    { "id": "bairro-novo", "nome": "Bairro Novo", "taxa": 9.0, "minimo": 25.0, "ativo": true }
+  ]
+}

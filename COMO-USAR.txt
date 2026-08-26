@@ -1,0 +1,16 @@
+PADARIA COELHO — como ligar o sistema
+
+1. Instale Python 3 (já vem na maioria dos computadores).
+2. Abra a pasta padaria-aurora.
+3. Rode:  python3 api/servidor.py
+4. No navegador: http://127.0.0.1:8765/index.html
+5. Painel: http://127.0.0.1:8765/admin.html
+   Senha: coelho1000
+
+Troque o WhatsApp em api/whatsapp.py
+Troque a chave PIX em api/pagamentos.py
+
+Para o sistema não cair com o terminal:
+  ./manter-ligado.sh
+
+Se cair, ele sobe de novo sozinho.

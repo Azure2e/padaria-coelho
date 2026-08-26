@@ -1,0 +1,9 @@
+__pycache__/
+api/segredo.key
+api/tokens.json
+api/usuarios.json
+api/auditoria.jsonl
+api/servidor.log
+api/servidor.log.*
+api/tls/key.pem
+api/tls/cert.pem

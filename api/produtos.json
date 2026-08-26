@@ -1,0 +1,136 @@
+{
+  "produtos": [
+    {
+      "id": "pao-frances",
+      "nome": "Pão Francês",
+      "categoria": "Pães",
+      "preco": 0.9,
+      "unidade": "un",
+      "imagem": "img/pao-frances.jpg",
+      "descricao": "Crocante por fora, macio por dentro.",
+      "ativo": true,
+      "estoque": 80,
+      "estoque_base": 80
+    },
+    {
+      "id": "pao-caseiro",
+      "nome": "Pão Caseiro",
+      "categoria": "Pães",
+      "preco": 18.9,
+      "unidade": "un",
+      "imagem": "img/pao-caseiro.jpg",
+      "descricao": "Fermentação lenta e casca rústica.",
+      "ativo": true,
+      "estoque": 20,
+      "estoque_base": 20
+    },
+    {
+      "id": "croissant",
+      "nome": "Croissant Manteiga",
+      "categoria": "Pães",
+      "preco": 9.9,
+      "unidade": "un",
+      "imagem": "img/croissant.jpg",
+      "descricao": "Massa folhada com manteiga.",
+      "ativo": true,
+      "estoque": 25,
+      "estoque_base": 25
+    },
+    {
+      "id": "pastel-carne",
+      "nome": "Pastel de Carne",
+      "categoria": "Pastéis",
+      "preco": 9.5,
+      "unidade": "un",
+      "imagem": "img/salgados.jpg",
+      "descricao": "Massa fina, recheio temperado.",
+      "ativo": true,
+      "estoque": 30,
+      "estoque_base": 30
+    },
+    {
+      "id": "pastel-queijo",
+      "nome": "Pastel de Queijo",
+      "categoria": "Pastéis",
+      "preco": 8.5,
+      "unidade": "un",
+      "imagem": "img/salgados.jpg",
+      "descricao": "Queijo derretido na hora.",
+      "ativo": true,
+      "estoque": 30,
+      "estoque_base": 30
+    },
+    {
+      "id": "pastel-palmito",
+      "nome": "Pastel de Palmito",
+      "categoria": "Pastéis",
+      "preco": 9.0,
+      "unidade": "un",
+      "imagem": "img/salgados.jpg",
+      "descricao": "Recheio cremoso de palmito.",
+      "ativo": true,
+      "estoque": 17,
+      "estoque_base": 20
+    },
+    {
+      "id": "coxinha",
+      "nome": "Coxinha de Frango",
+      "categoria": "Pastéis",
+      "preco": 8.5,
+      "unidade": "un",
+      "imagem": "img/salgados.jpg",
+      "descricao": "Recheio cremoso e massa leve.",
+      "ativo": true,
+      "estoque": 28,
+      "estoque_base": 28
+    },
+    {
+      "id": "cafe-puro",
+      "nome": "Café Coado da Casa",
+      "categoria": "Bebidas",
+      "preco": 6.0,
+      "unidade": "un",
+      "imagem": "img/cafe.jpg",
+      "descricao": "Grãos torrados artesanalmente.",
+      "ativo": true,
+      "estoque": 40,
+      "estoque_base": 40
+    },
+    {
+      "id": "cafe",
+      "nome": "Café com Leite + Pão na Chapa",
+      "categoria": "Bebidas",
+      "preco": 12.9,
+      "unidade": "combo",
+      "imagem": "img/cafe.jpg",
+      "descricao": "Clássico café da manhã da Padaria Coelho.",
+      "ativo": true,
+      "estoque": 34,
+      "estoque_base": 35
+    },
+    {
+      "id": "suco-laranja",
+      "nome": "Suco de Laranja",
+      "categoria": "Bebidas",
+      "preco": 8.0,
+      "unidade": "copo",
+      "imagem": "img/cafe.jpg",
+      "descricao": "Natural, espremido na hora.",
+      "ativo": true,
+      "estoque": 25,
+      "estoque_base": 25
+    },
+    {
+      "id": "pao-de-milho",
+      "nome": "Pão de milho",
+      "categoria": "Pães",
+      "preco": 7.5,
+      "unidade": "un",
+      "imagem": "img/pao-frances.jpg",
+      "descricao": "Fofinho",
+      "ativo": true,
+      "estoque": 18,
+      "estoque_base": 18
+    }
+  ]
+}

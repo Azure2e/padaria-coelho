@@ -1,0 +1,124 @@
+{
+  "pagamentos": [
+    {
+      "id": "PIX-D9028D27",
+      "txid": "PIXD9028D27",
+      "status": "pendente",
+      "valor": 39.9,
+      "subtotal": 39.9,
+      "entrega": {
+        "tipo": "retirada",
+        "bairro": null,
+        "taxa": 0.0,
+        "minimo": 0.0
+      },
+      "itens": [
+        {
+          "id": "cafe",
+          "nome": "Café com Leite + Pão na Chapa",
+          "qtd": 1,
+          "preco": 12.9,
+          "subtotal": 12.9
+        },
+        {
+          "id": "pastel-palmito",
+          "nome": "Pastel de Palmito",
+          "qtd": 3,
+          "preco": 9.0,
+          "subtotal": 27.0
+        }
+      ],
+      "cliente": {
+        "nome": "jaques da silva oliveira",
+        "telefone": "68999236863",
+        "tipo": "retirada",
+        "bairro": null
+      },
+      "estoque_reservado": true,
+      "copia_cola": "00020126460014br.gov.bcb.pix0124pix@padariacoelho.com.br520400005303986540539.905802BR5914PADARIA COELHO6009SAO PAULO62150511PIXD9028D2763046E1E",
+      "chave": "pix@padariacoelho.com.br",
+      "nonce": "3f6508d1-3743-4545-afa3-49e8251cfbe4",
+      "consulta": "vNqKYbTBcbPzyozH6n3vc-R6",
+      "selo": "d235ce2db62d034b60e563157c63db30005e81087ef9c7058b1b9bfec2665385",
+      "ip": "127.0.0.1",
+      "criado": "2026-08-26T22:21:56.514912+00:00",
+      "expira": "2026-08-26T22:36:56.509962+00:00",
+      "pago_em": null
+    },
+    {
+      "id": "PIX-A69ACC87",
+      "txid": "PIXA69ACC87",
+      "status": "expirado",
+      "valor": 23.0,
+      "subtotal": 19.0,
+      "entrega": {
+        "tipo": "entrega",
+        "bairro": "Centro",
+        "bairro_id": "centro",
+        "taxa": 4.0,
+        "minimo": 15.0
+      },
+      "itens": [
+        {
+          "id": "pastel-carne",
+          "nome": "Pastel de Carne",
+          "qtd": 2,
+          "preco": 9.5,
+          "subtotal": 19.0
+        }
+      ],
+      "cliente": {
+        "nome": "Ana",
+        "telefone": "1199",
+        "tipo": "entrega",
+        "bairro": "Centro"
+      },
+      "estoque_reservado": false,
+      "copia_cola": "00020126460014br.gov.bcb.pix0124pix@padariacoelho.com.br520400005303986540523.005802BR5914PADARIA COELHO6009SAO PAULO62150511PIXA69ACC87630462C7",
+      "chave": "pix@padariacoelho.com.br",
+      "nonce": "nBairroA2",
+      "consulta": "kkrq_QWAf0IKTxD63obj48rB",
+      "selo": "4c32a754915766a683f77d49868c8dc9468b7d91b98fd12950aa9515241b00f7",
+      "ip": "127.0.0.1",
+      "criado": "2026-08-26T13:56:49.332851+00:00",
+      "expira": "2026-08-26T14:11:49.332459+00:00",
+      "pago_em": null
+    },
+    {
+      "id": "PIX-9AD11DB9",
+      "txid": "PIX9AD11DB9",
+      "status": "pendente",
+      "valor": 11.3,
+      "itens": [
+        {
+          "id": "pao-frances",
+          "nome": "Pão Francês",
+          "qtd": 2,
+          "preco": 0.9,
+          "subtotal": 1.8
+        },
+        {
+          "id": "pastel-carne",
+          "nome": "Pastel de Carne",
+          "qtd": 1,
+          "preco": 9.5,
+          "subtotal": 9.5
+        }
+      ],
+      "cliente": {
+        "nome": "Joao",
+        "telefone": "1199999",
+        "tipo": "retirada"
+      },
+      "copia_cola": "00020126460014br.gov.bcb.pix0124pix@padariacoelho.com.br520400005303986540511.305802BR5914PADARIA COELHO6009SAO PAULO62150511PIX9AD11DB96304107D",
+      "chave": "pix@padariacoelho.com.br",
+      "nonce": "nonceTESTE00A",
+      "consulta": "QVwo0cg8RE6zued3yQAtDH3f",
+      "selo": "45a74de51fc791dda856cffbec7210e57f23a9d5f9c1ba170107c19f8271686d",
+      "ip": "127.0.0.1",
+      "criado": "2026-08-26T13:28:37.197981+00:00",
+      "expira": "2026-08-26T13:43:36.956340+00:00",
+      "pago_em": null
+    }
+  ]
+}
